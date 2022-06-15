@@ -1,0 +1,50 @@
+body {
+  background-color: #faebd7;
+}
+
+.wrapper{
+  max-width: 350px;
+  margin: 0 auto;
+  color: #666;
+}
+
+#header,#calc{
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/*ヘッダー*/
+
+#header {
+  font-size: 24px;
+  padding: 1rem;
+}
+
+/*テキスト*/
+
+input{
+  box-sizing: border-box;
+  width: 48%;
+  height: 3.5rem;
+  font-size: 1.6rem;
+  color: white;
+  background-color: #000000;
+  text-align: right;
+  padding: 0 0.75rem;
+}
+
+/*ボタン関係*/
+
+button{
+  font-size: 18px;
+  width: 15%;
+  height: 3.5rem;
+  color: #ffffff;
+  background-color: #a9a9a9;
+  vertical-align: middle;
+  border-color: #ffffff;
+}
+
+button:hover{
+  background-color: gray;
+}
