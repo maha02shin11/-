@@ -1,23 +1,18 @@
 'use strict';
 
-// データ
 let result = "";
 
-// =で計算したかどうか
 let is_calc = false;
 
-// 初期表示
 window.onload = function () {
   result = document.getElementById('result');
 };
 
-// Cキー押下
 function c_click(){
   result.value = "0";
   is_calc = false;
 }
 
-// 数字キー
 function num_click(val){
   if(is_calc)  result.value = "0";
   is_calc = false;  
@@ -33,7 +28,6 @@ function num_click(val){
   }
 }
 
-// 演算子キー
 function ope_click(val){
   if(is_calc)  is_calc = false;
   
@@ -44,7 +38,6 @@ function ope_click(val){
   }
 }
 
-// =キークリック
 function equal_click(){
   if(is_ope_last())  result.value = result.value.slice(0, -1);
 
@@ -57,7 +50,6 @@ function equal_click(){
   }
 }
 
-// 入力されている値が演算子かどうか
 function is_ope_last(){
   return ["+","-","×","÷"].includes(result.value.toString().slice(-1));
 }
