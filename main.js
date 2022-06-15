@@ -1,10 +1,10 @@
 'use strict';
 
 // データ
-var result = "";
+let result = "";
 
 // =で計算したかどうか
-var is_calc = false;
+let is_calc = false;
 
 // 初期表示
 window.onload = function () {
@@ -48,7 +48,7 @@ function ope_click(val){
 function equal_click(){
   if(is_ope_last())  result.value = result.value.slice(0, -1);
 
-  var temp = new Function("return " + result.value.replaceAll("×", "*").replaceAll("÷", "/"))();
+  let temp = new Function("return " + result.value.replaceAll("×", "*").replaceAll("÷", "/"))();
   if(temp == Infinity || Number.isNaN(temp)){
     result.value = "Error";
   }else{
